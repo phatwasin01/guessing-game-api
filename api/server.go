@@ -28,6 +28,7 @@ func NewServer() (*Server, error) {
 	router.POST("/login", server.login)
 	router.POST("/logout", server.logout)
 	authRoutes.POST("/guess", server.guessNumber)
+	// check authentication
 	authRoutes.GET("/check", server.checkAuthentication)
 
 	return server, nil
